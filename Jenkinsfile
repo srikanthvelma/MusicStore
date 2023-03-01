@@ -4,7 +4,7 @@ node('UBUNTU_NODE2') {
             branch: 'main'  
     }
     stage('Build') {
-        sh 'dotnet build ./MusicStore/MusicStore.csproj',
+        sh 'dotnet build ./MusicStore/MusicStore.csproj'
     }
     stage('publish results') {
         junit testResults: 'MusicStoreTest/*.xml'
