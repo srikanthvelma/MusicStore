@@ -1,6 +1,6 @@
 node('UBUNTU_NODE2'){
     stage('vcs'){
-        git url: 'https://github.com/CICDProjects/MusicStore.git',
+        git url: 'https://github.com/srikanthvelma/MusicStore.git',
             branch: 'main'  
     }
     stage('Build'){
