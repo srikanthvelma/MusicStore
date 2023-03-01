@@ -7,7 +7,7 @@ node('UBUNTU_NODE2') {
         sh 'dotnet build ./MusicStore/MusicStore.csproj'
     }
     stage('test') {
-        sh 'dotnet test ./MusicStore/MusicStore.csproj --logger:"junit;LogFilePath=TEST-result.xml"'
+        sh 'dotnet test ./MusicStoreTest/MusicStoreTest.csproj --logger:"junit;LogFilePath=TEST-result.xml"'
     }
     stage('publish results') {
         junit testResults: 'MusicStoreTest/TEST-*.xml',
